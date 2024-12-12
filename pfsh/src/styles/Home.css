@@ -1,0 +1,147 @@
+/* Cache les éléments avant qu'ils ne soient visibles */
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Optionnel : Style de la galerie */
+.about-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px; /* Espacement entre les images */
+  padding: 20px 0;
+}
+
+.gallery-item {
+  max-width: 80%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05); /* Zoom subtil au survol */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Carte d'introduction */
+.about-card {
+  margin-top: 4rem;
+  background: #f5f5dc2f;
+  border: solid 1px #f5f5dc;
+  border-radius: 5px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.about-card:hover {
+  box-shadow: 10px 10px #f5f5dc;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  color: #f5f5dc;
+  margin-bottom: 1rem;
+}
+
+.about-subtitle {
+  font-size: 1.5rem;
+  color: #f5f5dc;
+  margin-bottom: 1.5rem;
+}
+
+.about-description {
+  font-size: 1rem;
+  color: #f5f5dc;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.about-cta {
+  background-color: #4a90e2;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.about-cta:hover {
+  background-color: #357ab7;
+  transform: scale(1.1);
+}
+
+/* Responsiveness for smaller screens */
+@media (max-width: 768px) {
+  .about-gallery {
+    gap: 20px; /* Reduce the gap between images */
+  }
+
+  .gallery-item {
+    max-width: 100%; /* Images take up more space */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .gallery-item img {
+    width: 100%; /* Ensure images are fully visible */
+    height: auto;
+    border-radius: 5px;
+  }
+
+  .about-card {
+    padding: 1.5rem;
+  }
+
+  .about-title {
+    font-size: 2rem;
+  }
+
+  .about-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .about-description {
+    font-size: 0.9rem;
+  }
+
+  .about-cta {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Even smaller screens (mobile-first) */
+@media (max-width: 480px) {
+  .gallery-item {
+    max-width: 100%; /* Images fill the screen width */
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 0; /* Remove border radius for better fit */
+  }
+
+  .about-title {
+    font-size: 1.8rem;
+  }
+
+  .about-subtitle {
+    font-size: 1rem;
+  }
+
+  .about-description {
+    font-size: 0.8rem;
+  }
+}

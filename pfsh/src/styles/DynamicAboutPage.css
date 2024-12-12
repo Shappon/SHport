@@ -1,0 +1,82 @@
+/* Fond dynamique */
+.dynamic-background-page {
+    min-height: 100vh;
+    transition: background-color 0.3s ease;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .dynamic-background-page {
+    background-color: rgb(0, 71, 171); /* Fond initial */
+    min-height: 100vh; /* Assure que la page prend tout l'écran */
+    transition: background-color 0.3s ease-in-out; /* Transition douce */
+}
+  /* Section Présentation */
+  .about-intro {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espacement réduit */
+    margin-bottom: 30px; /* Espacement réduit entre sections */
+    background: rgba(28, 24, 24, 0.7); /* Rendu plus opaque */
+    border-radius: 8px; /* Bordure légèrement plus petite */
+    padding: 15px; /* Moins de padding */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Ombre plus légère */
+  }
+  .h{
+    color: rgba(255, 255, 255, 0.8);
+  }
+  .profile-photo {
+    width: 60px; /* Taille plus compacte */
+    height: 60px; /* Taille plus compacte */
+    border-radius: 50%;
+    border: 2px solid #6b73ff; /* Bordure plus fine */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Ombre plus discrète */
+  }
+  
+  .intro-text {
+    text-align: center; /* Centrer le texte */
+    font-size: 1.2rem; /* Taille du texte adaptée */
+    color: rgba(255, 255, 255, 0.8); /* Texte légèrement transparent */
+    line-height: 1.8; /* Espacement entre les lignes */
+    margin: 0 auto; /* Centrage horizontal */
+    max-width: 600px; /* Limite la largeur pour une meilleure lisibilité */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Ajoute une ombre douce pour le contraste */
+    background: none; /* Supprime toute bordure ou fond */
+    padding: 10px 20px; /* Un léger espacement interne pour l'aération */
+    font-style: italic; /* Apporte une touche élégante */
+    backdrop-filter: blur(5px); /* Effet flou pour intégrer au fond marin */
+    border: none; /* Supprime les bordures */
+  }
+  
+  
+  /* Section Galerie */
+  .about-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 80px; /* Espacement réduit */
+  }
+  
+  .gallery-item {
+    background: rgba(255, 255, 255, 0.075); /* Couleur blanche transparente */
+    border-radius: 15px; /* Arrondi légèrement plus important */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Ombre subtile mais plus marquée */
+    overflow: hidden;
+    max-width: 80%; /* Largeur plus adaptée */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease; /* Animations fluides */
+    padding: 15px; /* Ajoute de l’espace interne */
+    margin: 20px auto; /* Centrage avec marges */
+    backdrop-filter: blur(10px); /* Effet de flou pour se mêler au fond */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Bordure subtile pour s’intégrer au fond */
+}
+
+.gallery-item:hover {
+    transform: scale(1.05); /* Légère mise en avant au survol */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Ombre accentuée */
+    background: rgba(22, 22, 22, 0.4); /* Rend le fond plus visible */
+}
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  

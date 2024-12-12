@@ -1,0 +1,211 @@
+/* Fond général de la page */
+.services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Prend toute la hauteur de la fenêtre */
+    padding: 20px;
+    background-color:rgb(0, 71, 171); /* Bleu marine */
+    color: #fff; /* Texte blanc */
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* En-tête */
+.header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #f5f5dc; /* Jaune doré */
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 1rem;
+    color: #d3d3d3; /* Gris clair */
+    margin-bottom: 30px;
+}
+
+/* Grille des services */
+.services-grid {
+    display: flex;
+    flex-wrap: wrap; /* Permet de passer à la ligne si pas assez d'espace */
+    justify-content: center;
+    gap: 20px; /* Espacement entre les cartes */
+    width: 100%;
+    max-width: 1200px; /* Limite la largeur totale */
+}
+
+/* Carte de service */
+.service-card {
+    background: #ffffff24; /* Bleu-gris */
+    border-radius: 10px;
+   
+    padding: 20px;
+    flex: 1 1 calc(33.33% - 40px); /* 3 cartes côte à côte sur grand écran */
+    max-width: 20rem; /* Largeur maximale d'une carte */
+    min-width: 10rem; /* Largeur minimale pour la responsivité */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+     border: solid 0.5px #f5f5dc;
+}
+
+/* Contenu de la carte */
+.service-card h2 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #f5f5dc; /* Jaune doré */
+    margin-bottom: 10px;
+}
+
+.service-card .price {
+    font-size: 1.1rem;
+    color: #f5f5dc;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.service-card .description {
+    font-size: 0.9rem;
+    color: #d3d3d3; /* Gris clair */
+    margin-bottom: 20px;
+}
+
+/* Boutons CTA */
+.cta-btn {
+    background: #f5f5dc;
+    color: #283e51; /* Bleu marine pour le texte */
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.cta-btn:hover {
+    background: #ffffff11;
+    color: #d3d3d3;
+    transform: scale(1.05);
+    border: solid 0.5px #f5f5dc;
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+    .service-card {
+        flex: 1 1 100%; /* Empile les cartes verticalement */
+        max-width: 100%;
+    }
+
+    .header h1 {
+        font-size: 1.8rem;
+    }
+
+    .header p {
+        font-size: 0.9rem;
+    }
+
+    .cta-btn {
+        font-size: 0.9rem;
+    }
+}
+/* Conteneur principal */
+
+
+/* Grille des services */
+.services-grid {
+    display: flex;
+    flex-wrap: wrap; /* S'adapte aux petits écrans */
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Carte de service */
+.service-card {
+    background: rgba(255, 255, 255, 0.1); /* Légère transparence */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    flex: 1 1 calc(33.33% - 20px); /* 3 cartes côte à côte sur grand écran */
+    max-width: 300px;
+    min-width: 250px; /* Taille minimale pour responsivité */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Survol de la carte */
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Carte spéciale pour contact */
+.contact-card {
+    flex: 1 1 100%; /* Occupe toute la largeur sur mobile */
+    max-width: 400px; /* Taille maximale sur desktop */
+}
+
+/* Boutons de contact */
+.contact-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Espacement entre les boutons */
+    margin-top: 20px;
+}
+
+.cta-btn {
+    background-color: #f5f5dc; /* Beige */
+    color: #000; /* Noir pour le texte */
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    flex: 1;
+    text-align: center;
+}
+
+.cta-btn:hover {
+    background-color: #ffffff33; /* Légère transparence au survol */
+    transform: scale(1.05); /* Effet de zoom */
+    color: #f5f5dc;
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+    .services-grid {
+        flex-direction: column; /* Empile les cartes verticalement */
+        align-items: center;
+    }
+
+    .service-card {
+        max-width: 100%; /* Prend toute la largeur disponible */
+    }
+
+    .contact-buttons {
+        flex-direction: column; /* Boutons empilés sur petit écran */
+    }
+}
+/* Effet de surbrillance */
+.contact-card.highlighted {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.8); /* Halo doré */
+    transform: scale(1.05); /* Zoom léger */
+    background-color: rgba(255, 255, 255, 0.2); /* Légère transparence */
+}
+
+/* Transition pour revenir à l'état normal */
+.contact-card:not(.highlighted) {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}

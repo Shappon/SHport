@@ -1,0 +1,77 @@
+/* Conteneur principal */
+.header {
+    position: fixed; /* Fixé en haut de la page */
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 1000;
+    transition: background-color 0.3s ease; /* Transition pour la transparence */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+/* Logo */
+.logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f5f5dc; /* Beige */
+    text-decoration: none;
+}
+.logo a:hover {
+    color: #fff; /* Blanc au survol */
+     /* Agrandissement léger au survol */
+}
+/* Navigation des liens */
+.nav-links {
+    display: flex;
+    gap: 20px; /* Espacement entre les liens */
+}
+
+.nav-links a {
+    font-size: 1rem;
+    color: #f5f5dc; /* Beige */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #fff; /* Blanc au survol */
+   
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Cacher les liens par défaut en mobile */
+        flex-direction: column;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 71, 171, 0.95); /* Légère transparence */
+        padding: 20px;
+        gap: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-links.open {
+        display: flex; /* Affiche les liens en mode mobile */
+    }
+}
+
+/* Bouton Menu (pour Mobile) */
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: #f5f5dc;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Affiche le bouton menu en mode mobile */
+    }
+}

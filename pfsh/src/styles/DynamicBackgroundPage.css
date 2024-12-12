@@ -1,0 +1,28 @@
+.dynamic-background-page {
+    min-height: 200vh; /* Pour avoir suffisamment d'espace à scroller */
+    transition: background-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .content {
+    padding: 50px;
+    text-align: center;
+    font-size: 1.5em;
+    color: white;
+  }
+  
+  .bottom-image {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 200px; /* Ajustez la hauteur selon votre image */
+    overflow: hidden;
+  }
+  
+  .bottom-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  

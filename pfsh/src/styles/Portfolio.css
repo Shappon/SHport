@@ -1,0 +1,12 @@
+.portfolio .projects {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project {
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 5px;
+}

@@ -1,0 +1,21 @@
+.scroll-sync-container {
+    position: relative;
+  }
+  
+  .content {
+    padding: 20px;
+  }
+  
+  .scroll-gif {
+    position: fixed; /* Fixe le GIF par rapport à la fenêtre */
+    right: 0; /* Place le GIF à côté de la barre de scroll */
+    transform: translateY(-50%); /* Centre verticalement l'image */
+    transition: top 0.1s ease-out; /* Transition fluide pour le déplacement */
+  }
+  
+  .scroll-gif img {
+    width: 85px; /* Ajustez la taille du GIF */
+    height: 85px;
+    object-fit: contain;
+  }
+  

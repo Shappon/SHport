@@ -1,0 +1,142 @@
+
+
+/* Carte de présentation */
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #f4f4f4, #d3e0ff);
+    box-sizing: border-box;
+}
+
+/* Carte de présentation */
+.about-card {
+    background: rgba(255, 255, 255, 0.075);
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 20px 30px;
+    text-align: center;
+    max-width: 600px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+color: #555;
+    /* Centrage */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto; /* Centrage horizontal */
+}
+
+/* Texte dans la carte */
+.about-card h1,
+.about-card h2,
+.about-card p {
+    margin: 10px 0;
+}
+
+/* Section Galerie */
+.about-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+    margin-top: 40px;
+}
+
+/* Suppression de marge indésirable */
+.gallery-grid,
+.gallery-item {
+    margin: 0;
+}
+
+.about-gallery h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Grille de la galerie */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adaptation automatique */
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.02); /* Zoom léger sur l'image */
+}
+
+.gallery-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Photo de profil */
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #6b73ff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 20px 0;
+}
+
+/* Texte de l'intro */
+.intro-details {
+    max-width: 600px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.intro-details h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.intro-details p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-card {
+        max-width: 90%; /* Réduit la largeur sur mobile */
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr; /* Une seule colonne sur petit écran */
+    }
+}
